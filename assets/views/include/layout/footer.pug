@@ -1,0 +1,8 @@
+article.footer
+	.footer__cont.cont
+		.footer__box
+			span.footer__copyright © 2020 ГисАльянсСервис
+			a.footer__policy-link(href="#") Политика в отношении обработки персональных данных
+		ul.footer__menu-list
+			each item in menuList
+				a.footer__menu-link(href=`${item.link}`)= item.name

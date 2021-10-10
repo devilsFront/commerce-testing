@@ -1,0 +1,171 @@
+.services-form
+  color: white
+
+.services-form__area
+  display: flex
+  flex-wrap: wrap
+  @media screen and (max-width: 900px)
+    display: block
+
+.services-form__box
+  position: relative
+  padding: 58px 63px 60px 72px
+  width: 50%
+  background-color: #364248
+  @media screen and (max-width: 1240px)
+    padding: 24px 16px 33px
+  @media screen and (max-width: 900px)
+    width: 100%
+
+.services-form__title
+
+.services-form__note_small
+  display: block
+  margin-bottom: 16px
+  font-size: 16px
+  line-height: 24px
+  @media screen and (max-width: 1240px)
+    margin-bottom: 8px
+
+.services-form__list
+
+.services-form__item
+  font-size: 16px
+  line-height: 24px
+  position: relative
+  margin-bottom: 16px
+  padding-left: 24px
+
+  &:last-child
+    margin-bottom: 48px
+    @media screen and (max-width: 1240px)
+      margin-bottom: 24px
+
+  @media screen and (max-width: 1240px)
+    margin-bottom: 8px
+
+  &::before
+    content: ''
+    position: absolute
+    top: 10px
+    left: 10px
+    width: 4px
+    height: 4px
+    border-radius: 6px
+    background: #E95445
+
+.services-form__phone-box
+  position: absolute
+  bottom: 60px
+  right: 127px
+  width: 156px
+  font-size: 22px
+  line-height: 32px
+  @media screen and (max-width: 1600px)
+    margin-top: 24px
+    position: static
+  @media screen and (max-width: 1240px)
+    width: 170px
+
+.services-form__text
+  display: block
+
+.services-form__link
+  position: relative
+  font-size: 22px
+  line-height: 32px
+  @media screen and (max-width: 1240px)
+    font-size: 24px
+
+  &:hover
+    &:before
+      background-color: rgba(white, 1)
+
+  &:before
+    content: ''
+    position: absolute
+    bottom: -3px
+    left: 0
+    width: 100%
+    height: 1px
+    transition-duration: .2s
+    transition-property: background-color
+    background-color: rgba(white, .15)
+
+.services-form__link_small
+  @media screen and (max-width: 1240px)
+    font-size: 14px
+    line-height: 20px
+
+.services-form__form
+  padding: 64px 73px 64px 64px
+  width: 50%
+  background-color: #2C383F
+  @media screen and (max-width: 1240px)
+    padding: 32px 16px
+  @media screen and (max-width: 900px)
+    width: 100%
+
+.services-form__form-text
+  display: block
+  margin-bottom: 24px
+  font-size: 12px
+  line-height: 24px
+  letter-spacing: 0.1em
+  @media screen and (max-width: 1240px)
+    margin-bottom: 16px
+
+.services-form__form-input
+  border: none
+  border-bottom: 1px solid rgba(white, .15)
+  padding: 16px 0
+  display: block
+  width: 100%
+  margin-bottom: 24px
+  font-size: 16px
+  line-height: 24px
+  color: rgba(white, .5)
+  background-color: transparent
+
+  &::placeholder
+    font-size: 16px
+    line-height: 24px
+    color: rgba(white, .5)
+
+  &:focus, &:active, &:hover
+    outline: none
+
+  &:last-of-type
+    margin-bottom: 32px
+    @media screen and (max-width: 1240px)
+      margin-bottom: 24px
+
+  @media screen and (max-width: 1240px)
+    margin-bottom: 16px
+
+.services-form__form-btn
+  border: none
+  margin-bottom: 24px
+  display: block
+  padding: 16px
+  width: 100%
+  font-size: 16px
+  line-height: 24px
+  color: white
+  background-color: $orange
+  @media screen and (max-width: 1240px)
+    margin-bottom: 16px
+
+.services-form__form-note
+  font-size: 14px
+  line-height: 24px
+  color: rgba(white, .5)
+
+.services-form__form-link
+  font-size: 14px
+  line-height: 24px
+  color: rgba(white, .75)
+
+  &:hover
+    text-decoration: underline
+

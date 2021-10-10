@@ -1,0 +1,36 @@
+.library
+
+.library__cont
+
+.library__title
+
+.library__link
+  margin-bottom: 24px
+  display: flex
+  color: $orange
+  font-size: 16px
+  line-height: 28px
+  @media screen and (max-width: 1240px)
+    font-size: 14px
+    line-height: 24px
+
+  &:last-of-type
+    margin-bottom: 72px
+    @media screen and (max-width: 1240px)
+      margin-bottom: 32px
+
+  &:hover
+    .library__link-text
+      text-decoration: underline
+
+.library__picture
+
+.library__image
+  margin-right: 16px
+  width: 64px
+  height: 64px
+  @media screen and (max-width: 1240px)
+    width: 32px
+    height: 32px
+
+.library__link-text

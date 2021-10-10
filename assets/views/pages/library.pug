@@ -1,0 +1,12 @@
+include ../include/mixin/head
+
+<!DOCTYPE html>
+html(lang="en")
+  +head
+  body
+    include ../include/layout/header
+    +header('', 'white')
+    include ../include/library/library
+    include ../include/services/services-form
+    include ../include/layout/footer
+    script(src=develop ? `${pathStatics}/app.js` : `${pathStatics}/app${hash}.js`, async=true)

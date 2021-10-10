@@ -1,0 +1,71 @@
+.contacts
+
+.contacts__cont
+
+.contacts__area
+  display: flex
+  margin: 0 -72px
+  flex-wrap: wrap
+  font-size: 22px
+  line-height: 32px
+  @media screen and (max-width: 1366px)
+    display: block
+  @media screen and (max-width: 1240px)
+    margin: 0 -16px
+    font-size: 14px
+    line-height: 24px
+
+.contacts__box
+  &:first-child
+    flex-shrink: 0
+    margin-left: 72px
+    margin-right: 36px
+    max-width: 692px
+    @media screen and (max-width: 1240px)
+      margin-bottom: 24px
+      margin-left: 16px
+
+  &:last-child
+    position: relative
+    flex-grow: 1
+    height: 480px
+    @media screen and (max-width: 1240px)
+      height: 320px
+
+.contacts__text
+  margin-bottom: 40px
+  @media screen and (max-width: 1240px)
+    margin-bottom: 16px
+
+.contacts__name
+  display: block
+
+.contacts__link
+  display: inline-block
+  margin-bottom: 40px
+  color: $orange
+  @media screen and (max-width: 1240px)
+    margin-bottom: 16px
+
+  &:hover
+    text-decoration: underline
+
+.contacts__btn
+  display: block
+  width: 298px
+  padding: 16px 88px 16px 24px
+  +bgImg('arrow-big.svg')
+  background-repeat: no-repeat
+  background-position: top 25px right 25px
+  @media screen and (max-width: 1240px)
+    width: 194px
+    padding: 12px 54px 12px 16px
+    +bgImg('arrow.svg')
+    background-position: 148px 19px
+
+.contacts__map
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0

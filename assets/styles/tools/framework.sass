@@ -1,0 +1,44 @@
+.caption
+  font-size: 64px
+  line-height: 80px
+  font-weight: 300
+  @media screen and (max-width: 1240px)
+    font-size: 24px
+    line-height: 32px
+
+.title
+  margin-bottom: 24px
+  font-size: 48px
+  line-height: 64px
+  font-weight: 300
+  @media screen and (max-width: 1240px)
+    margin-bottom: 16px
+    font-size: 24px
+    line-height: 32px
+
+.text-big
+  font-size: 24px
+  line-height: 40px
+  @media screen and (max-width: 1240px)
+    font-size: 16px
+    line-height: 24px
+
+.text
+  font-size: 16px
+  line-height: 24px
+  @media screen and (max-width: 1240px)
+    font-size: 14px
+    line-height: 20px
+
+.about-company__link
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    bottom: -1px
+    width: 100%
+    height: 1px
+    transition: .2s
+    transition-property: background-color
+    background-color: rgba(white, .15)

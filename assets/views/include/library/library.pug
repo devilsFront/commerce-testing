@@ -1,0 +1,33 @@
+-
+	const libraryList = [
+		{
+			text: 'Консолидированная промежуточная сокращенная финансовая отчетность, подготовленная в соответствии с международными стандартами финансовой отчетности (МСФО) (не прошедшая аудит) 30 июня 2020',
+			img: 'ic_pdf',
+			file: 'test.pdf'
+		},
+		{
+			text: 'Ежеквартальный отчет за II квартал 2020 года',
+			img: 'ic_doc',
+			file: 'test.doc'
+		},
+		{
+			text: 'Консолидированная промежуточная сокращенная финансовая отчетность, подготовленная в соответствии с международными стандартами финансовой отчетности (МСФО) (не прошедшая аудит) 30 июня 2020',
+			img: 'ic_pdf',
+			file: 'test.pdf'
+		},
+		{
+			text: 'Ежеквартальный отчет за II квартал 2020 года',
+			img: 'ic_doc',
+			file: 'test.doc'
+		}
+	]
+
+article.library
+	.library__cont.cont
+		h2.library__title.title Библиотека
+		each item in libraryList
+			a.library__link(href=`files/${item.file}` download)
+				picture.library__picture
+					source(srcset=`${pathImg}library/${item.img}.png`)
+					img.library__image(src=`${pathImg}library/${item.img}.png`, alt="")
+				span.library__link-text= item.text

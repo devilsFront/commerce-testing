@@ -1,0 +1,14 @@
+mixin picture-block(path)
+	article.picture-block
+		.picture-block__cont.cont
+			picture.picture-block__picture
+				source(srcset=`${path}_360.webp`, type="image/webp", media="(max-width: 540px)")
+				source(srcset=`${path}_700.webp`, type="image/webp", media="(max-width: 700px)")
+				source(srcset=`${path}_950.webp`, type="image/webp", media="(max-width: 950px)")
+				source(srcset=`${path}_1240.webp`, type="image/webp", media="(max-width: 1240px)")
+				source(srcset=`${path}_1456.webp`, type="image/webp")
+				source(srcset=`${path}_360.jpg`, media="(max-width: 540px)")
+				source(srcset=`${path}_700.jpg`, media="(max-width: 700px)")
+				source(srcset=`${path}_950.jpg`, media="(max-width: 950px)")
+				source(srcset=`${path}_1240.jpg`, media="(max-width: 1240px)")
+				img.picture-block__image(src=`${path}_1456.jpg`, alt="")

@@ -1,0 +1,23 @@
+article.services-form
+	.services-form__area
+		.services-form__box
+			h2.services-form__title.title Форма запроса дополнительной информации
+			span.services-form__note_small Оставьте свои контактные данные и получите:
+			ul.services-form__list
+				li.services-form__item Консультацию со специалистом компании
+				li.services-form__item Презентацию / Документацию
+			h2.services-form__title.title Самара
+			a.services-form__link.services-form__link_small Улица Пушкина, д. 23, офис 305, 3 этаж
+			.services-form__phone-box
+				span.services-form__text Наш телефон:
+				a.services-form__link(href='tel:88002504950') 8 800 250 49 50
+		form.services-form__form
+			span.services-form__form-text СВЯЖЕМСЯ С ВАМИ В ТЕЧЕНИИ 15 МИНУТ
+			input.services-form__form-input(type='text', required, placeholder='Ваше имя', name="name")
+			input.services-form__form-input(type='tel', required, placeholder='Номер телефона', name="phone")
+			input.services-form__form-input(type='email', required, placeholder='E-Mail', name="mail")
+			button.services-form__form-btn.orange-btn(type='submit') Оставить заявку
+			span.services-form__form-note
+				| Отправляя свои контакты, вы соглашаетесь с
+				|
+			a.services-form__form-link(href="#") политикой конфиденциальности

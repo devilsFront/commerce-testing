@@ -1,0 +1,19 @@
+include ../include/mixin/head
+
+<!DOCTYPE html>
+html(lang="en")
+  +head
+  body
+    include ../include/layout/header
+    +header('index')
+    include ../include/index/index-cap
+    +index-cap(
+      'ООО «ГисАльянсСервис»',
+      'Компания ООО «ГисАльянсСервис» является одним из основных подрядчиков, выполняющих геофизические исследования и работы в скважинах. Надёжный партнер, обеспечивающим своевременным и надлежащим качеством выполнение принятых на себя договорных обязательств. Профессионализм, гибкий подход к пожеланиям Заказчика, оперативность выполнения поставленных задач, внедрение инновационных технологий, характеризуют нас только с положительной стороны.',
+      'true'
+    )
+    include ../include/index/about-company
+    include ../include/index/contacts
+    include ../include/layout/footer
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+    script(src=develop ? `${pathStatics}/app.js` : `${pathStatics}/app${hash}.js`, async=true)

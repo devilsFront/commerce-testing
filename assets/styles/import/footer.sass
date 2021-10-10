@@ -1,0 +1,74 @@
+.footer
+  border-top: 1px solid rgba(44, 56, 63, 0.15)
+  @media screen and (max-width: 1366px)
+    padding-top: 24px
+    padding-bottom: 24px
+
+.footer__cont
+  display: flex
+  justify-content: space-between
+  align-items: center
+  @media screen and (max-width: 1366px)
+    flex-wrap: wrap
+
+.footer__box
+  @media screen and (max-width: 1366px)
+    order: 2
+
+.footer__copyright
+  display: block
+  @media screen and (max-width: 1366px)
+    display: none
+
+.footer__policy-link
+  color: rgba($dark, .5)
+  font-size: 14px
+  line-height: 24px
+  @media screen and (max-width: 1240px)
+    font-size: 12px
+    line-height: 16px
+
+  &:hover
+    text-decoration: underline
+
+.footer__menu-list
+  display: flex
+  flex-shrink: 0
+  font-weight: 400
+  @media screen and (max-width: 1366px)
+    flex-wrap: wrap
+    width: 100%
+    order: 1
+
+.footer__menu-link
+  padding: 28px 0
+  position: relative
+  color: $dark
+  font-size: 16px
+  line-height: 24px
+  @media screen and (max-width: 1366px)
+    margin-bottom: 12px
+    padding: 4px 0
+    font-size: 14px
+
+  &:not(:last-child)
+    margin-right: 32px
+
+  &:last-child
+    margin-right: 24px
+
+  &:before
+    content: ''
+    position: absolute
+    bottom: 25px
+    width: 100%
+    height: 1px
+    transition: .2s
+    transition-property: background-color
+    background-color: rgba(44, 56, 63, 0.15)
+    @media screen and (max-width: 1366px)
+      bottom: 5px
+
+  &:hover
+    &:before
+      background-color: $dark

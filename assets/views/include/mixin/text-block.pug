@@ -1,0 +1,6 @@
+mixin text-block(title, texts)
+	article.text-block
+		.text-block__cont.cont
+			h2.text-block__title.title= title
+			each text in texts
+				p.text-block__text= text

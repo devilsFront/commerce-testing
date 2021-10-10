@@ -1,0 +1,50 @@
+-
+	const menuList = [
+		{name: "О компании", link: '/about.html'},
+		{name: "Услуги", link: '/services.html'},
+		{name: "Библиотека", link: '/library.html'},
+		{name: "Документация", link: '/documentation.html'},
+		{name: "Работа у нас", link: '/work.html'},
+		{name: "Отзывы", link: '/reviews.html'},
+		{name: "Контакты", link: '/contacts.html'},
+	]
+
+mixin header(mod, white)
+	header.header(data-element= "header", class= white ? `header_${white} header_static`: '')
+		.header__cont.cont
+			.header__area
+				.header__box
+					if mod === 'index'
+						.header__logo
+							picture.header__logo-picture
+								source(srcset=`${pathImg}header/mobile-logo.svg`, media="(max-width: 900px)", data-element= "header__logo-source")
+								img.header__logo-image(src=`${pathImg}header/logo.svg`, alt="", data-element= "header__logo-image")
+							span.header__logo-caption Гис Альянс Сервис
+					else
+						a.header__logo.header__logo_link(href="index.html")
+							picture.header__logo-picture
+								if white
+									source(srcset=`${pathImg}header/mobile-logo-black.svg`, media="(max-width: 900px)", data-element= "header__logo-source")
+									img.header__logo-image(src=`${pathImg}header/logo-black.svg`, alt="", data-element= "header__logo-image")
+								else
+									source(srcset=`${pathImg}header/mobile-logo.svg`, media="(max-width: 900px)", data-element= "header__logo-source")
+									img.header__logo-image(src=`${pathImg}header/logo.svg`, alt="", data-element= "header__logo-image")
+							span.header__logo-caption Гис Альянс Сервис
+					.header__burger(data-element= "header__burger")
+						.header__burger-container
+							.header__burger-line
+					.header__contacts
+						a.header__phone(href="tel:8 800 250 49 50") 8 800 250 49 50
+						a.header__mail(href="mailto:gas@nv-gas.com") gas@nv-gas.com
+				.header__box
+					ul.header__menu-list
+						each item, index in menuList
+							li.header__menu-item
+								if (index===1)
+									.header__menu-link= item.name
+										include ../../include/layout/floating-menu
+								else
+									a.header__menu-link(href=`${item.link}`)= item.name
+					.header__language-list
+						a.header__language-item.header__language-item_active(href="#") Ру
+						a.header__language-item(href="#") En

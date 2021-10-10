@@ -1,0 +1,60 @@
+.index-cap
+  margin-bottom: 72px
+  @media screen and (max-width: 1240px)
+    margin-bottom: 24px
+  position: relative
+
+  &:after, &:before
+    content: ''
+    position: absolute
+    z-index: -1
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+  &:after
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+
+  &:before
+    +bgImg('index-cap/index-cap-1_1920.jpg')
+    background-size: cover
+    background-position: center center
+    @media screen and (max-width: 1240px)
+      +bgImg('index-cap/index-cap-1_1240.jpg')
+    @media screen and (max-width: 950px)
+      +bgImg('index-cap/index-cap-1_950.jpg')
+    @media screen and (max-width: 700px)
+      +bgImg('index-cap/index-cap-1_700.jpg')
+    @media screen and (max-width: 540px)
+      +bgImg('index-cap/index-cap-1_540.jpg')
+    @media screen and (max-width: 360px)
+      +bgImg('index-cap/index-cap-1_360.jpg')
+
+.index-cap__cont
+  position: relative
+  min-height: 720px
+  padding-bottom: 72px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  color: white
+  @media screen and (max-width: 1240px)
+    min-height: 568px
+
+.index-cap__caption
+  margin-bottom: 8px
+
+.index-cap__caption_index
+  margin-bottom: 16px
+  @media screen and (max-width: 1240px)
+    display: none
+
+.index-cap__text
+
+.index-cap__text_index
+  @media screen and (max-width: 1240px)
+    text-align: center
+
+.index-cap__text_visible
+  display: block

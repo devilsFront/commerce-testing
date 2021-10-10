@@ -1,0 +1,5 @@
+mixin index-cap(title, text, mod)
+	article.index-cap(data-element="index-cap")
+		.index-cap__cont.cont
+			h1.index-cap__caption.caption(class= mod ? 'index-cap__caption_index': '')= title
+			p.index-cap__text.text-big(class= mod ? 'index-cap__text_index': '')= text
